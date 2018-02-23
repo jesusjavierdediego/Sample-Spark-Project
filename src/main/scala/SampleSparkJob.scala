@@ -1,6 +1,6 @@
 import org.apache.spark.{SparkContext, SparkConf}
 
-class SampleSparkJob {
+object SampleSparkJob extends SampleSparkJob{
   def main(args: Array[String]) {
     // Bootstrap Spark
     val conf = new SparkConf().setAppName("Sample Spark Scala Application")
@@ -19,4 +19,9 @@ class SampleSparkJob {
     // Performed on the driver
     mapped_rdd.take(2).foreach(println)
   }
+  
+  
+}
+class SampleSparkJob {
+  
 }
