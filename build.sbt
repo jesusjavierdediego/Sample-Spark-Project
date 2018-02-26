@@ -16,8 +16,9 @@ assemblyMergeStrategy in assembly := {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
 }
-
+/*
 lazy val spark_run = taskKey[Unit]("Builds the assembly and ships it to the Spark Cluster")
 spark_run := {
   ("/full/path/to/bin/spark_submit " + assembly.value) !
 }
+*/
